@@ -58,10 +58,7 @@ const getNavigationItems = (userRole: string | undefined) => {
   if (userRole === 'company') {
     return [
       { path: '/company-home', label: 'Dashboard', icon: Building2 },
-      { path: '/company-services', label: 'Services', icon: Package },
-      { path: '/company-consultants', label: 'Consultants', icon: Users },
-      { path: '/company-analytics', label: 'Analytics', icon: BarChart },
-      { path: '/settings', label: 'Settings', icon: Settings },
+      { path: '/consultants', label: 'Browse Consultants', icon: Users },
     ];
   }
   
@@ -79,13 +76,15 @@ const SmartNavigation = () => {
   const navigationItems = getNavigationItems(user?.role);
   
   // Get user type badge
-  const getUserTypeBadge = () => {
+  const getRoleBadge = () => {
     if (!user?.role) return null;
+    
+    // Don't show badge for company users
+    if (user.role === 'company') return null;
     
     const badgeConfig = {
       user: { label: 'User', color: 'bg-blue-500' },
       consultant: { label: 'Consultant', color: 'bg-green-500' },
-      company: { label: 'Company', color: 'bg-purple-500' },
     };
     
     const config = badgeConfig[user.role as keyof typeof badgeConfig];
@@ -180,7 +179,7 @@ const SmartNavigation = () => {
 
             {isAuthenticated && user ? (
               <div className="flex items-center gap-3">
-                {getUserTypeBadge()}
+                {getRoleBadge()}
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant="ghost" className="relative h-10 w-10 rounded-full">

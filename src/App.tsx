@@ -51,6 +51,10 @@ import ConsultantProfileSetup from "./pages/signup/ConsultantProfileSetup";
 import CompanyRegister from "./pages/signup/CompanyRegister";
 import ApplicationSubmitted from "./pages/signup/ApplicationSubmitted";
 import Unauthorized from "./pages/Unauthorized";
+import SimpleLandingPage from "./pages/SimpleLandingPage";
+import SimpleUserSignup from "./pages/SimpleUserSignup";
+import FindConsultantsDashboard from "./pages/FindConsultantsDashboard";
+import QuickRegister from "./pages/QuickRegister";
 
 const queryClient = new QueryClient();
 
@@ -64,6 +68,7 @@ const App = () => (
           <SmartNavigation />
           <Routes>
             <Route path="/" element={<MarketplaceHome />} />
+            <Route path="/simple-landing" element={<SimpleLandingPage />} />
             <Route path="/home" element={<Home />} />
             <Route path="/marketplace" element={<Marketplace />} />
             <Route path="/gig/:id" element={<GigDetail />} />
@@ -98,7 +103,7 @@ const App = () => (
             <Route 
               path="/company-home" 
               element={
-                <ProtectedRoute allowedRoles={['user']}>
+                <ProtectedRoute allowedRoles={['company']}>
                   <CompanyLanding />
                 </ProtectedRoute>
               } 
@@ -108,7 +113,7 @@ const App = () => (
             <Route 
               path="/consultants" 
               element={
-                <ProtectedRoute allowedRoles={['user']}>
+                <ProtectedRoute allowedRoles={['user', 'company']}>
                   <Consultants />
                 </ProtectedRoute>
               } 
@@ -142,6 +147,14 @@ const App = () => (
               element={
                 <ProtectedRoute allowedRoles={['user']}>
                   <UserDashboard />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/company-dashboard" 
+              element={
+                <ProtectedRoute allowedRoles={['company']}>
+                  <CompanyDashboard />
                 </ProtectedRoute>
               } 
             />
@@ -211,6 +224,17 @@ const App = () => (
             <Route path="/footer-showcase" element={<FooterShowcase />} />
             <Route path="/design-system" element={<DesignSystemShowcase />} />
             <Route path="/unauthorized" element={<Unauthorized />} />
+            <Route path="/quick-register" element={<QuickRegister />} />
+            <Route path="/signup/user" element={<SimpleUserSignup />} />
+            <Route path="/signup/consultant" element={<ConsultantProfileSetup />} />
+            <Route 
+              path="/find-consultants" 
+              element={
+                <ProtectedRoute allowedRoles={['user']}>
+                  <FindConsultantsDashboard />
+                </ProtectedRoute>
+              } 
+            />
             <Route 
               path="/become-consultant" 
               element={

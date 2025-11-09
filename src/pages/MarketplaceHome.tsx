@@ -140,7 +140,7 @@ const MarketplaceHome = () => {
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                 <Button
                   size="lg"
-                  onClick={() => navigate('/signup?type=user')}
+                  onClick={() => navigate('/quick-register')}
                   className="bg-[#F5E6D3] hover:bg-[#E8DCC8] text-[#2B2520] border-2 border-[#D4C5B9] shadow-sm px-8 transition-all duration-200"
                 >
                   Find Consultants
