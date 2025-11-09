@@ -1,3 +1,6 @@
+import Button from './Button';
+import { Link } from 'react-router-dom';
+
 export default function Hero(){
   return (
     <section className="bg-gradient-to-b from-blue-50 to-white py-16">
@@ -7,15 +10,17 @@ export default function Hero(){
         </h1>
         <p className="mt-4 text-gray-600">Your trusted platform for expert consulting services and business growth</p>
 
-        <div className="mt-8 flex justify-center">
-          <input
-            aria-label="search"
-            className="w-72 px-4 py-3 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-300 shadow-sm"
-            placeholder="Search for consulting domain..."
-          />
-          <button className="px-5 py-3 bg-blue-700 text-white rounded-r-lg hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-300 shadow-soft transition">
-            Search
-          </button>
+        <div className="mt-8 flex justify-center gap-4">
+          <Button asChild>
+            <Link to="/consultant-register" className="border border-gray-300 bg-white text-gray-700 hover:bg-gray-100 font-medium px-6 py-3 rounded-lg shadow transition">
+              Become a Consultant
+            </Link>
+          </Button>
+          <Button asChild>
+            <Link to="/consultants" className="bg-[#f4ede4] border border-gray-300 text-gray-800 font-medium px-6 py-3 rounded-lg shadow transition hover:bg-[#ede7dd]">
+              Find Consultants
+            </Link>
+          </Button>
         </div>
       </div>
     </section>
