@@ -1,0 +1,364 @@
+/**
+ * MentorMe Design System
+ * Modern SaaS Platform with Blue Gradient, Pink Accents, Gold Premium
+ */
+
+:root {
+  /* Primary Blue Gradient */
+  --color-blue-dark: #003D82;
+  --color-blue-light: #4A90E2;
+  --color-blue-50: #E6F2FF;
+  --color-blue-100: #CCE5FF;
+  --color-blue-200: #99CCFF;
+  --color-blue-300: #66B2FF;
+  --color-blue-400: #4A90E2;
+  --color-blue-500: #3380DB;
+  --color-blue-600: #2670C4;
+  --color-blue-700: #1A60AD;
+  --color-blue-800: #0D5096;
+  --color-blue-900: #003D82;
+
+  /* Pink/Magenta Accents (CTAs) */
+  --color-pink-primary: #FF006E;
+  --color-pink-secondary: #E84B8A;
+  --color-pink-50: #FFE6F2;
+  --color-pink-100: #FFCCE5;
+  --color-pink-200: #FF99CB;
+  --color-pink-300: #FF66B1;
+  --color-pink-400: #FF3397;
+  --color-pink-500: #FF006E;
+  --color-pink-600: #E6006
+
+3;
+  --color-pink-700: #CC0058;
+  --color-pink-800: #B3004D;
+  --color-pink-900: #990042;
+
+  /* Gold Premium */
+  --color-gold-primary: #FFB81C;
+  --color-gold-50: #FFF9E6;
+  --color-gold-100: #FFF3CC;
+  --color-gold-200: #FFE799;
+  --color-gold-300: #FFDB66;
+  --color-gold-400: #FFCF33;
+  --color-gold-500: #FFB81C;
+  --color-gold-600: #E6A619;
+  --color-gold-700: #CC9416;
+  --color-gold-800: #B38213;
+  --color-gold-900: #997010;
+
+  /* Neutral Grays */
+  --color-gray-50: #F9FAFB;
+  --color-gray-100: #F3F4F6;
+  --color-gray-200: #E5E7EB;
+  --color-gray-300: #D1D5DB;
+  --color-gray-400: #9CA3AF;
+  --color-gray-500: #6B7280;
+  --color-gray-600: #4B5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1F2937;
+  --color-gray-900: #111827;
+
+  /* Semantic Colors */
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+  --color-info: #3B82F6;
+
+  /* Gradients */
+  --gradient-blue: linear-gradient(135deg, var(--color-blue-dark) 0%, var(--color-blue-light) 100%);
+  --gradient-pink: linear-gradient(135deg, var(--color-pink-primary) 0%, var(--color-pink-secondary) 100%);
+  --gradient-gold: linear-gradient(135deg, var(--color-gold-700) 0%, var(--color-gold-400) 100%);
+  --gradient-blue-pink: linear-gradient(135deg, var(--color-blue-light) 0%, var(--color-pink-primary) 100%);
+  --gradient-premium: linear-gradient(135deg, var(--color-gold-500) 0%, var(--color-gold-300) 50%, var(--color-gold-500) 100%);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-blue: 0 10px 25px -5px rgba(74, 144, 226, 0.3);
+  --shadow-pink: 0 10px 25px -5px rgba(255, 0, 110, 0.3);
+  --shadow-gold: 0 10px 25px -5px rgba(255, 184, 28, 0.3);
+
+  /* Glass Effect */
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-blur: blur(10px);
+
+  /* Typography */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Plus Jakarta Sans', 'Inter', sans-serif;
+
+  /* Spacing Scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* Border Radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Utility Classes */
+
+/* Gradients */
+.gradient-blue {
+  background: var(--gradient-blue);
+}
+
+.gradient-pink {
+  background: var(--gradient-pink);
+}
+
+.gradient-gold {
+  background: var(--gradient-gold);
+}
+
+.gradient-blue-pink {
+  background: var(--gradient-blue-pink);
+}
+
+.gradient-premium {
+  background: var(--gradient-premium);
+}
+
+/* Text Gradients */
+.text-gradient-blue {
+  background: var(--gradient-blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-pink {
+  background: var(--gradient-pink);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-gold {
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass Effect */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Shadows */
+.shadow-blue {
+  box-shadow: var(--shadow-blue);
+}
+
+.shadow-pink {
+  box-shadow: var(--shadow-pink);
+}
+
+.shadow-gold {
+  box-shadow: var(--shadow-gold);
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--gradient-blue);
+  color: white;
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-blue);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl);
+}
+
+.btn-cta {
+  background: var(--gradient-pink);
+  color: white;
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-pink);
+}
+
+.btn-cta:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: var(--shadow-xl);
+}
+
+.btn-premium {
+  background: var(--gradient-gold);
+  color: var(--color-gray-900);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-lg);
+  font-weight: 700;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-gold);
+}
+
+.btn-premium:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: var(--shadow-2xl);
+}
+
+/* Cards */
+.card {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px);
+}
+
+.card-premium {
+  background: linear-gradient(135deg, #FFF9E6 0%, #FFFFFF 100%);
+  border: 2px solid var(--color-gold-400);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-premium::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-gold);
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-premium {
+  background: var(--gradient-gold);
+  color: var(--color-gray-900);
+  box-shadow: var(--shadow-gold);
+}
+
+.badge-popular {
+  background: var(--gradient-pink);
+  color: white;
+  box-shadow: var(--shadow-pink);
+}
+
+.badge-trial {
+  background: var(--gradient-blue);
+  color: white;
+  box-shadow: var(--shadow-blue);
+}
+
+/* Animations */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.shimmer {
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 100%
+  );
+  background-size: 1000px 100%;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Responsive Typography */
+.text-display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.text-display-xl {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+.text-display-lg {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.text-display-md {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+/* Focus States */
+.focus-ring:focus {
+  outline: 2px solid var(--color-blue-light);
+  outline-offset: 2px;
+}
+
+.focus-ring-pink:focus {
+  outline: 2px solid var(--color-pink-primary);
+  outline-offset: 2px;
+}
